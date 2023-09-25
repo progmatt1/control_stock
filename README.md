@@ -59,8 +59,9 @@ CREATE TABLE `control_stock`.`movimientos` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 ```
-```
+
 ### productos_deposito
+```
 CREATE TABLE `productos_deposito` (
   `id` int NOT NULL AUTO_INCREMENT,
   `id_deposito` int NOT NULL,
