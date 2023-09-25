@@ -2,30 +2,16 @@
 Proyecto usando Java 17+ en Spring Boot para crear una API. Se trata de un control de stock
 # Inicio
 Crea estas tablas en MySql:
-### deposito
+### productos
 ```
-CREATE TABLE `control_stock`.`deposito` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` TEXT NOT NULL,
-  `descripcion` TEXT NOT NULL,
-  `direccion` TEXT NOT NULL,
-  PRIMARY KEY (`id`));
-```
-### movimiento_tipo
-```
-CREATE TABLE `control_stock`.`movimiento_tipo` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` TEXT NOT NULL,
-  `descripcion` TEXT NOT NULL,
-  PRIMARY KEY (`id`));
-```
-### producto
-```
-CREATE TABLE `control_stock`.`producto` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` TEXT NOT NULL,
-  `descripcion` TEXT NOT NULL,
-  `precio` FLOAT NOT NULL,
-  `cantidad` INT NOT NULL,
-  PRIMARY KEY (`id`));
+CREATE TABLE `productos` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nombre` text NOT NULL,
+  `descripcion` text NOT NULL,
+  `precio` float NOT NULL,
+  `cantidad` text NOT NULL,
+  `fecha_creacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `fecha_actualizacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
