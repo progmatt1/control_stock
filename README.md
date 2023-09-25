@@ -35,7 +35,7 @@ CREATE TABLE `control_stock`.`depositos` (
 CREATE TABLE `control_stock`.`movimientos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `cantidad` INT NOT NULL,
-  `fecha` TIMESTAMP NOT NULL,
+  `fecha` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
   `id_movimiento_tipo` INT NOT NULL,
   `id_producto` INT NOT NULL,
   `id_deposito` INT NOT NULL,
