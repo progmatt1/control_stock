@@ -1,7 +1,10 @@
 # control_stock
 Proyecto usando Java 17+ en Spring Boot para crear una API. Se trata de un control de stock
 # Inicio
-Este es el inicio basico para empezar
+Este es el inicio basico para empezar.
+## Modelo ER
+Este es el modelo que estariamos utilizando
+![alt text](https://raw.githubusercontent.com/progmatt1/control_stock/main/er-model.png?token=GHSAT0AAAAAACGO5MURR57A4EOBQ5KV6GWEZIRSXHQ)
 ## Crea estas tablas en MySql
 La logica aqui es crear distintas tablas en orden y configurar sus respectivas relaciones. Despues en el codigo del proyecto en Java
 se da la logica.
