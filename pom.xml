@@ -8,11 +8,11 @@
 		<version>3.1.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.mobeats.control_stock</groupId>
-	<artifactId>beta</artifactId>
+	<groupId>com.mobeats</groupId>
+	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>beta</name>
-	<description>Demo project for Spring Boot</description>
+	<name>demo</name>
+	<description>demo proyect for a control stock</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -27,6 +27,37 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+<dependency>
+        <groupId>javax.validation</groupId>
+        <artifactId>validation-api</artifactId>
+        <version>2.0.1.Final</version> <!-- Use the latest version -->
+    </dependency>
+    <!-- Spring Validation -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
+    <!-- Hibernate Core -->
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>5.5.7.Final</version> <!-- Use the latest version -->
+    </dependency>
+
+    <!-- Hibernate Entity Manager -->
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>5.5.7.Final</version> <!-- Use the same version as Hibernate Core -->
+    </dependency>
+<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
 	</dependencies>
 
 	<build>
