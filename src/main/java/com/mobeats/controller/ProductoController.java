@@ -25,7 +25,7 @@ public class ProductoController {
   private ProductoRepository productoRepository;
 
   /**
-   * Get all users list.
+   * Get all users list test.
    *
    * @return the list
    */
