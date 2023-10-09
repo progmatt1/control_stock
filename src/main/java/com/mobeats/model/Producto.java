@@ -1,10 +1,10 @@
-package com.mobeats.model;
+package com.mobeats.api.model;
 
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -16,15 +16,21 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "nombre", nullable = false)
     private String name;
 
-    @Column(name = "description", nullable = false)
+    @Column(name = "descripcion", nullable = false)
     private String description;
+
+    @Column(name = "precio", nullable = false)
+    private Long precio;
+
+    @Column(name = "cantidad", nullable = false)
+    private Long cantidad;
 
     @UpdateTimestamp
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "updated_at", nullable = false)
+    @Column(name = "fecha_actualizacion", nullable = false)
     private Date updatedAt;
 
     @Column(name = "updated_by", nullable = false)
@@ -55,12 +61,20 @@ public class Producto {
         this.description = description;
     }
 
-    public Date getUpdatedAt() {
-        return updatedAt;
+    public long getCantidad() {
+        return cantidad;
     }
 
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
+    public void setCantidad(long cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public long getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(long precio) {
+        this.precio = precio;
     }
 
     public String getUpdatedBy() {
@@ -77,8 +91,9 @@ public class Producto {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", updatedAt=" + updatedAt +
-                ", updatedBy='" + updatedBy + '\'' +
+                ", precio='" + precio + '\'' +
+                ", cantidad='" + cantidad + '\'' +
+                ", updatedBy='" + updatedBy + '\'' + 
                 '}';
     }
 }
